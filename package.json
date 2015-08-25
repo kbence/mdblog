@@ -1,0 +1,34 @@
+{
+  "name": "mdblog",
+  "version": "0.0.1",
+  "description": "Simple Markdown Blog Engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node index.js",
+    "dev": "./node_modules/.bin/nodemon -w . -e js,coffee index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbence/mdblog.git"
+  },
+  "keywords": [
+    "markdown",
+    "blog"
+  ],
+  "author": "Bence Kiglics",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/kbence/mdblog/issues"
+  },
+  "homepage": "https://github.com/kbence/mdblog#readme",
+  "dependencies": {
+    "coffee-script": "^1.9.3",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "less": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.4.1"
+  }
+}
