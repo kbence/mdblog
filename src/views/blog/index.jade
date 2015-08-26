@@ -6,3 +6,8 @@ html
   body
     #page
       h1= blogTitle || "Blog"
+      .posts
+        #console.log(posts)
+        each post in posts
+          a(href=post.url)
+            h1= post.title

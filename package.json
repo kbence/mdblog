@@ -23,10 +23,14 @@
   },
   "homepage": "https://github.com/kbence/mdblog#readme",
   "dependencies": {
+    "async": "^1.4.2",
     "coffee-script": "^1.9.3",
     "express": "^4.13.3",
+    "header-parse": "^0.1.0",
+    "internet-message": "^1.0.0",
     "jade": "^1.11.0",
-    "less": "^2.5.1"
+    "less": "^2.5.1",
+    "marked": "^0.3.5"
   },
   "devDependencies": {
     "nodemon": "^1.4.1"
