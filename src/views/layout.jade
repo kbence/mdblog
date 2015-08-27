@@ -2,7 +2,11 @@ doctype html
 html
   head
     title= pageTitle || "Blog"
-  
+    link(rel="stylesheet",type="text/css",href="/css/blog.css")
+
   body
+    #header
+      .center
+        h1= pageTitle || "Blog"
     #page
       block content

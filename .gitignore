@@ -1,3 +1,6 @@
 # npm stuff
 /node_modules/
 /npm-debug.log
+
+# generated files
+/src/public/css/*.css

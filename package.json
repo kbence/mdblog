@@ -29,7 +29,7 @@
     "header-parse": "^0.1.0",
     "internet-message": "^1.0.0",
     "jade": "^1.11.0",
-    "less": "^2.5.1",
+    "less-middleware": "^2.0.1",
     "marked": "^0.3.5"
   },
   "devDependencies": {
