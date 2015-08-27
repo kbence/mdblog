@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 @pageWidth:         960px;
+@maxImageWidth:     @pageWidth;
 @borderColor:       #666;
 @fontColor:         #aaa;
 @headerColor:       #ddd;
@@ -65,5 +66,12 @@ code {
 
   .posts {
     font-size: 0.8em;
+  }
+
+  .post-content {
+    img {
+      max-width: @maxImageWidth;
+      border-radius: 5px;
+    }
   }
 }
