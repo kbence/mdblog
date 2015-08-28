@@ -11,6 +11,7 @@ html
   body
     #header
       .center
-        h1= pageTitle || "Blog"
+        a(href="/")
+          h1= pageTitle || "Blog"
     #page
       block content
