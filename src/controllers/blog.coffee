@@ -13,7 +13,6 @@ exports.showPost = (req, res) ->
   p = req.params
   postId = "#{p.year}-#{p.month}-#{p.day}_#{p[0]}"
   posts.get postId, (err, postData) ->
-    console.log CONFIG.get
     res.render 'blog/post',
       pageTitle:       CONFIG.get PAGE_TITLE
       post:            postData
