@@ -22,6 +22,12 @@ of the markdown features - except from the GitHub flavored ones. **Bold** and
 _italic_ text is a basic feature. [This](https://google.com/) is how a link
 looks like.
 
+A block of code looks like this:
+
+    int main() {
+      return 0;
+    }
+
 ## Ordered and unordered lists
 
 1. This
