@@ -3,3 +3,5 @@ extends ../layout
 block content
   .post-content
     !=post.content
+  if disqusShortname
+    include ./disqus

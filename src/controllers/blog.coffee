@@ -2,6 +2,7 @@ marked = require 'marked'
 posts = require '../lib/posts'
 
 PAGE_TITLE       = 'page.title'
+DISQUS_SHORTNAME = 'integrations.disqus.shortname'
 
 exports.index = (req, res) ->
   posts.list (err, postList) ->
@@ -16,3 +17,4 @@ exports.showPost = (req, res) ->
     res.render 'blog/post',
       pageTitle:       CONFIG.get PAGE_TITLE
       post:            postData
+      disqusShortname: CONFIG.get DISQUS_SHORTNAME
