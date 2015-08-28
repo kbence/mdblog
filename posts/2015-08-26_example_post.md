@@ -28,6 +28,16 @@ A block of code looks like this:
       return 0;
     }
 
+You can even specify the language if you use GitHub flavoured syntax:
+
+```java
+class MyObject {
+  public static void main(String args[]) {
+    // hack hack hack
+  }
+}
+```
+
 ## Ordered and unordered lists
 
 1. This

@@ -3,6 +3,10 @@ html
   head
     title= pageTitle || "Blog"
     link(rel="stylesheet",type="text/css",href="/css/blog.css")
+    link(rel="stylesheet",href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/darkula.min.css")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js")
+    script
+      | hljs.initHighlightingOnLoad();
 
   body
     #header
