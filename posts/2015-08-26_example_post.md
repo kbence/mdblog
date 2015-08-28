@@ -1,7 +1,5 @@
 Title: Example post
 
-# Example post
-
 This post is just for testing purposes. The part which appears on the main page
 goes until the first horizontal line.
 

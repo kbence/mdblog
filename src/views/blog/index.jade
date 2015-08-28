@@ -6,4 +6,5 @@ block content
     each post in posts
       .post-intro
         a(href=post.url)
+          h1= post.title
           != post.intro
