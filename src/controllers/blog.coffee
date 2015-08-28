@@ -12,7 +12,8 @@ exports.index = (req, res) ->
 
 exports.showPost = (req, res) ->
   p = req.params
-  postId = "#{p.year}-#{p.month}-#{p.day}_#{p[0]}"
+  name = if p[0].substr(-1) == '/' then p[0].substr(0, p[0].length - 1) else p[0]
+  postId = "#{p.year}-#{p.month}-#{p.day}_#{name}"
   posts.get postId, (err, postData) ->
     res.render 'blog/post',
       pageTitle:       CONFIG.get PAGE_TITLE

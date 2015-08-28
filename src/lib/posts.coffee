@@ -9,7 +9,7 @@ POSTS_ROOT = "#{__dirname}/../../posts"
 POST_FILENAME_FORMAT = /(\d{4}-\d{2}-\d{2})_(.*)\.md/
 
 loadPost = (filename, options, cb) ->
-  match = filename.match /(\d{4}-\d{2}-\d{2})_(.*)\.md/
+  match = filename.match POST_FILENAME_FORMAT
 
   withContent = options.withContent || false
   withIntro   = options.withIntro   || false
@@ -24,7 +24,7 @@ loadPost = (filename, options, cb) ->
       msg = HeaderParse.extractHeaderBlock content
 
       entry = {
-        url: "/#{urlDate}/#{urlTitle}.html",
+        url: "/#{urlDate}/#{urlTitle}/",
         title: msg.headers['Title']
       }
 
