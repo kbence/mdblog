@@ -3,6 +3,7 @@ async           = require 'async'
 InternetMessage = require 'internet-message'
 HeaderParse     = require 'header-parse'
 marked          = require 'marked'
+renderer        = require './renderer'
 
 POSTS_ROOT = "#{__dirname}/../../posts"
 POST_FILENAME_FORMAT = /(\d{4}-\d{2}-\d{2})_(.*)\.md/
@@ -11,6 +12,7 @@ loadPost = (filename, options, cb) ->
   match = filename.match /(\d{4}-\d{2}-\d{2})_(.*)\.md/
 
   withContent = options.withContent || false
+  withIntro   = options.withIntro   || false
 
   if match
     urlDate = match[1].replace(/-/g, '/')
@@ -27,14 +29,17 @@ loadPost = (filename, options, cb) ->
       }
 
       if withContent
-        entry.content = marked(msg.body)
+        entry.content = marked msg.body, renderer: renderer.createRenderer()
+
+      if withIntro
+        entry.intro = marked msg.body, renderer: renderer.createIntroRenderer()
 
       cb null, entry
   else
     cb "File name '#{filename}' doesn't look like a post."
 
 loadPostMetadata = (filename, cb) ->
-  loadPost filename, { withContent: false }, cb
+  loadPost filename, { withContent: false, withIntro: true }, cb
 
 exports.list = (cb) ->
   fs.readdir POSTS_ROOT, (err, content) ->

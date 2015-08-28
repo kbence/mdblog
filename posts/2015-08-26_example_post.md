@@ -2,9 +2,17 @@ Title: Example post
 
 # Example post
 
-This post is just for testing purposes.
+This post is just for testing purposes. The part which appears on the main page
+goes until the first horizontal line.
 
-The preview of the post
+Wherever you put it, will mark the end of the introduction. This HR will be
+removed in the final post.
+
+---
+
+But the next one will always be there:
+
+---
 
 ## Simple paragraph
 
