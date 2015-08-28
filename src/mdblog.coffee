@@ -1,6 +1,14 @@
 express        = require 'express'
-routing        = require './routing'
 lessMiddleware = require 'less-middleware'
+routing        = require './routing'
+{Config}       = require './lib/config'
+
+try
+  config = require '../config.json'
+catch e
+  config = {}
+
+global.CONFIG = new Config config
 
 app = express()
 app.set 'view engine', 'jade'
