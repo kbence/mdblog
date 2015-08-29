@@ -4,4 +4,5 @@ ADD . /app
 WORKDIR /app
 
 RUN npm install --production
-CMD npm run run
+CMD npm run app
+
