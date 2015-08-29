@@ -1,6 +1,6 @@
 {
   "name": "mdblog",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple Markdown Blog Engine",
   "main": "index.js",
   "scripts": {
